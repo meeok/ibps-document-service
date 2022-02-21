@@ -9,6 +9,7 @@ public interface Constants {
     String passwordField = "PASSWORD";
     String logPathField = "LOGPATH";
     String tempDocDirField ="TEMPDOCDIR";
+    String volumeIdField = "VOLUMEID";
 
     String logName = "Document Service";
 }

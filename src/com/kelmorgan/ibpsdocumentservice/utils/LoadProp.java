@@ -7,12 +7,12 @@ import java.util.Properties;
 public class LoadProp implements Constants {
     private final Properties properties = new Properties();
 
-    public LoadProp(String configPath)  {
+    public LoadProp(String configPath) {
         try {
             InputStream inputStream = new FileInputStream(configPath);
             properties.load(inputStream);
-        } catch (Exception e){
-            System.out.println("Exception Occurred: "+e.getMessage());
+        } catch (Exception e) {
+            System.out.println("Exception Occurred: " + e.getMessage());
         }
     }
 
@@ -38,6 +38,10 @@ public class LoadProp implements Constants {
 
     public String getServiceLogPath() {
         return properties.getProperty(logPathField);
+    }
+
+    public String getVolumeId() {
+        return properties.getProperty(volumeIdField);
     }
 
 }
